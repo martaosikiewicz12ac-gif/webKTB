@@ -11,13 +11,23 @@ Checklista prowadzenia projektu od pomyslu do wdrozenia.
 ## 2. Struktura i layout
 - [ ] Rozpisac widoki / podstrony
 - [ ] Ustalic nawigacje
-- [ ] Przyjac podejscie mobile-first
-- [ ] Ustalic breakpointy dla mobile / tablet / desktop
-- [ ] Zdefiniowac zasady progresywnego layoutu zalezne od szerokosci ekranu
+- [x] Przyjac podejscie mobile-first
+- [x] Ustalic breakpointy dla mobile / tablet / desktop
+- [x] Zdefiniowac zasady progresywnego layoutu zalezne od szerokosci ekranu
 - [ ] Zaplanowac layout desktop
 - [ ] Zaplanowac layout tablet
 - [ ] Zaplanowac layout mobile
 - [ ] Wypisac glowne komponenty
+
+## 2A. Sekcje strony
+- [x] Przygotowac startowy szkielet strony
+- [ ] Header / topbar
+- [ ] Hero z glownym CTA
+- [ ] Sekcja oferty / uslug / wartosci
+- [ ] Social proof / opinie / liczby / logotypy
+- [ ] FAQ lub sekcja pytan i odpowiedzi
+- [ ] Footer z kontaktem i linkami
+- [ ] Dodatkowe sekcje zalezne od typu projektu
 
 ## 3. Model danych
 - [ ] Spisac potrzebne encje
@@ -78,3 +88,5 @@ Checklista prowadzenia projektu od pomyslu do wdrozenia.
 - Tablet: uklad posredni, wiecej oddechu, czesciowo 2-kolumnowy.
 - Telefon: waski uklad, priorytet tresci i pionowy flow.
 - Sekcje maja zmieniac hierarchie, gestosc i uklad zamiast byc projektowane jako osobne strony dla urzadzen.
+- Startowy szkielet strony: hero, sekcja podejscia, przeglad sekcji do dalszego rozwoju.
+- Responsywnosc realizujemy przez wspolne breakpointy i mixiny w SCSS.

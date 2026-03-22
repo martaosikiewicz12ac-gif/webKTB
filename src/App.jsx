@@ -1,120 +1,82 @@
-import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import heroImg from './assets/hero.png'
 import './App.scss'
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
-    <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
-        </div>
-        <div>
-          <h1>Get started</h1>
-          <p>
-            Edit <code>src/App.jsx</code> and save to test <code>HMR</code>
+    <main className="page-shell">
+      <section className="hero-section section-block">
+        <div className="eyebrow">Starter layout</div>
+        <div className="hero-copy">
+          <p className="section-kicker">Mobile-first structure</p>
+          <h1>Responsive base for phone, tablet and desktop.</h1>
+          <p className="hero-text">
+            This is a clean scaffold for building the real interface. Each section
+            is ready to evolve from a narrow mobile flow into wider tablet and web
+            layouts.
           </p>
         </div>
-        <button
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
-      </section>
-
-      <div className="ticks"></div>
-
-      <section id="next-steps">
-        <div id="docs">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#documentation-icon"></use>
-          </svg>
-          <h2>Documentation</h2>
-          <p>Your questions, answered</p>
-          <ul>
-            <li>
-              <a href="https://vite.dev/" target="_blank">
-                <img className="logo" src={viteLogo} alt="" />
-                Explore Vite
-              </a>
-            </li>
-            <li>
-              <a href="https://react.dev/" target="_blank">
-                <img className="button-icon" src={reactLogo} alt="" />
-                Learn more
-              </a>
-            </li>
-          </ul>
-        </div>
-        <div id="social">
-          <svg className="icon" role="presentation" aria-hidden="true">
-            <use href="/icons.svg#social-icon"></use>
-          </svg>
-          <h2>Connect with us</h2>
-          <p>Join the Vite community</p>
-          <ul>
-            <li>
-              <a href="https://github.com/vitejs/vite" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#github-icon"></use>
-                </svg>
-                GitHub
-              </a>
-            </li>
-            <li>
-              <a href="https://chat.vite.dev/" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#discord-icon"></use>
-                </svg>
-                Discord
-              </a>
-            </li>
-            <li>
-              <a href="https://x.com/vite_js" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#x-icon"></use>
-                </svg>
-                X.com
-              </a>
-            </li>
-            <li>
-              <a href="https://bsky.app/profile/vite.dev" target="_blank">
-                <svg
-                  className="button-icon"
-                  role="presentation"
-                  aria-hidden="true"
-                >
-                  <use href="/icons.svg#bluesky-icon"></use>
-                </svg>
-                Bluesky
-              </a>
-            </li>
-          </ul>
+        <div className="hero-actions">
+          <a href="#content" className="button button--primary">
+            Start planning
+          </a>
+          <a href="#sections" className="button button--secondary">
+            View sections
+          </a>
         </div>
       </section>
 
-      <div className="ticks"></div>
-      <section id="spacer"></section>
-    </>
+      <section className="section-block intro-grid" id="content">
+        <article className="panel panel--feature">
+          <p className="section-kicker">Approach</p>
+          <h2>One layout that scales progressively.</h2>
+          <p>
+            On mobile the content stacks vertically. On tablet it gains spacing and
+            partial two-column groupings. On desktop the layout opens into a wider,
+            more expressive composition.
+          </p>
+        </article>
+        <article className="panel">
+          <p className="section-kicker">Responsive ranges</p>
+          <ul className="stack-list">
+            <li>Mobile: under 768px</li>
+            <li>Tablet: 768px to 1023px</li>
+            <li>Desktop: 1024px and above</li>
+          </ul>
+        </article>
+      </section>
+
+      <section className="section-block sections-overview" id="sections">
+        <div className="section-heading">
+          <p className="section-kicker">Page skeleton</p>
+          <h2>Suggested sections to build next.</h2>
+        </div>
+        <div className="sections-grid">
+          <article className="panel">
+            <h3>Header</h3>
+            <p>Logo, navigation and a clear primary action.</p>
+          </article>
+          <article className="panel">
+            <h3>Hero</h3>
+            <p>Main message, supporting copy and first CTA.</p>
+          </article>
+          <article className="panel">
+            <h3>Offer</h3>
+            <p>Core value blocks, cards or service highlights.</p>
+          </article>
+          <article className="panel">
+            <h3>Social proof</h3>
+            <p>Opinions, metrics, logos or credibility markers.</p>
+          </article>
+          <article className="panel">
+            <h3>FAQ</h3>
+            <p>Answers to common objections and practical questions.</p>
+          </article>
+          <article className="panel">
+            <h3>Footer</h3>
+            <p>Contact, legal links and repeat navigation.</p>
+          </article>
+        </div>
+      </section>
+    </main>
   )
 }
 

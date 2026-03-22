@@ -1,3 +1,5 @@
+@use './breakpoints' as bp;
+
 body {
   background:
     radial-gradient(circle at top, rgba(214, 169, 130, 0.22), transparent 32%),
@@ -5,14 +7,17 @@ body {
 }
 
 #root {
-  width: min(1126px, 100%);
+  width: min(1200px, 100%);
   margin: 0 auto;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  text-align: center;
-  border-inline: 1px solid var(--border);
+  border-inline: 1px solid rgba(221, 210, 195, 0.8);
   background: color-mix(in srgb, var(--surface) 92%, white 8%);
+}
+
+main {
+  width: 100%;
 }
 
 h1,
@@ -30,15 +35,24 @@ h6 {
 h1 {
   font-size: clamp(2.5rem, 5vw, 3.5rem);
   letter-spacing: -0.03em;
-  margin: 32px 0;
+  margin: 0 0 1rem;
 }
 
 h2 {
   font-size: clamp(1.4rem, 3vw, 1.5rem);
-  margin-bottom: 8px;
+  margin: 0;
+}
+
+h3 {
+  font-size: 1.15rem;
+  margin: 0;
 }
 
 p {
+  margin: 0;
+}
+
+ul {
   margin: 0;
 }
 
@@ -50,4 +64,10 @@ code {
   color: var(--text-h);
   font-family: var(--font-mono);
   font-size: 0.9rem;
+}
+
+@include bp.tablet-up {
+  #root {
+    min-height: 100svh;
+  }
 }
