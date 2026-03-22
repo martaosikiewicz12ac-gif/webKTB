@@ -1,92 +1,90 @@
-# IDEA
+# Koncept wizualny
 
-Checklista prowadzenia projektu od pomyslu do wdrozenia.
+## Kierunek
+- Ciemny, chlodny granat jako baza calego interfejsu.
+- Biala i szara typografia, bez kolorowych tekstow.
+- Akcenty marki ograniczone glownie do CTA i subtelnych dodatkow.
 
-## 1. Cel i zakres
-- [ ] Okreslic, do czego sluzy strona
-- [ ] Zdefiniowac glownego uzytkownika
-- [ ] Spisac funkcje MVP
-- [ ] Spisac, czego nie robimy w pierwszej wersji
+## Tlo
+- Tlo strony jednolite kolorystycznie na `body` i `#root`.
+- Chlodne, niebieskie glowy w tle jako duze, miekkie radialne plamy.
+- Dodatkowy lewy glow bardziej od srodka ekranu, z lekko mocniejsza intensywnoscia.
+- Minimalny cieply akcent moze zostac bardzo subtelnie na dalszym planie.
 
-## 2. Struktura i layout
-- [ ] Rozpisac widoki / podstrony
-- [ ] Ustalic nawigacje
-- [x] Przyjac podejscie mobile-first
-- [x] Ustalic breakpointy dla mobile / tablet / desktop
-- [x] Zdefiniowac zasady progresywnego layoutu zalezne od szerokosci ekranu
-- [ ] Zaplanowac layout desktop
-- [ ] Zaplanowac layout tablet
-- [ ] Zaplanowac layout mobile
-- [ ] Wypisac glowne komponenty
+## Sekcje i hero
+- Hero i pozostale sekcje maja nalezec do tej samej rodziny kolorystycznej.
+- Bez widocznych borderow na blokach i hero.
+- Rozroznienie budowane gradientem, cieniem i swiatlem, a nie obramowaniem.
 
-## 2A. Sekcje strony
-- [x] Przygotowac startowy szkielet strony
-- [ ] Header / topbar
-- [ ] Hero z glownym CTA
-- [ ] Sekcja oferty / uslug / wartosci
-- [ ] Social proof / opinie / liczby / logotypy
-- [ ] FAQ lub sekcja pytan i odpowiedzi
-- [ ] Footer z kontaktem i linkami
-- [ ] Dodatkowe sekcje zalezne od typu projektu
+## Efekt 3D
+- Bloki maja delikatny efekt glebi.
+- Zewnetrzny cien daje odciecie od tla.
+- Wewnetrzne rozjasnienie u gory i lekkie przyciemnienie u dolu buduja subtelne 3D.
+- Hero moze miec nieco mocniejsza glebie niz zwykle sekcje.
 
-## 3. Model danych
-- [ ] Spisac potrzebne encje
-- [ ] Okreslic pola dla kazdej encji
-- [ ] Ustalic relacje miedzy danymi
-- [ ] Okreslic, ktore dane sa statyczne, a ktore z bazy
+## Ogolne zasady
+- Unikac cieplego, zloto-pomaranczowego klimatu jako dominujacego motywu tla.
+- Zachowac chlodny, nowoczesny, lekko motoryzacyjny charakter.
+- Nie mieszac wielu roznych wersji granatu miedzy hero i reszta komponentow.
+- Preferowac spojny, premium wyglad zamiast ostrych ramek i wysokiego kontrastu.
 
-## 4. Frontend na mockach
-- [ ] Zbudowac podstawowy layout
-- [ ] Podpiac mock data
-- [ ] Przejsc glowne flow uzytkownika
-- [ ] Sprawdzic responsywnosc
+# Koncept tresci
 
-## 5. Backend i baza danych
-- [ ] Wybrac backend / usluge danych
-- [ ] Zaprojektowac schemat danych
-- [ ] Przygotowac integracje API
-- [ ] Podlaczyc frontend do prawdziwych danych
+## Glowny kierunek
+- Strona ma budowac wiarygodnosc marki i wspierac lokalne SEO.
+- To ma byc centralny hub marki, a nie tylko prosta strona skupu aut.
+- Komunikacja ma byc spokojna, rzeczowa, lokalna i oparta na zaufaniu.
 
-## 6. Testy i dopracowanie
-- [ ] Sprawdzic podstawowe scenariusze
-- [ ] Poprawic UX i bledy
-- [ ] Uporzadkowac tresci, nazwy i CTA
-- [ ] Zweryfikowac wersje mobilna i desktopowa
+## Rola strony glownej
+- Prezentuje najwazniejsze uslugi: skup, komis, sprzedaz i pomoc drogowa.
+- Kieruje ruch do social media, portali zewnetrznych, aplikacji i sklepu.
+- Buduje zaufanie przez opinie, przejrzysty proces i czytelne informacje.
 
-## 7. Deployment i domena
-- [ ] Wybrac hosting
-- [ ] Ustawic zmienne srodowiskowe
-- [ ] Wystawic aplikacje na produkcje
-- [ ] Podpiac domene
-- [ ] Wlaczyc SSL
-- [ ] Sprawdzic wersje produkcyjna
+## Filar komunikacji
+- Zaufanie: legalny proces, jasne zasady, formalnosci i realny kontakt.
+- Lokalnosc: mocne osadzenie w regionie i tresci pod lokalne frazy SEO.
+- Wygoda: szybki kontakt, latwe przejscia do wlasciwych kanalow i uslug.
+- Elastycznosc: rozne modele wspolpracy - skup, komis, sprzedaz, pomoc drogowa.
 
-## Decyzje projektowe
-- Nazwa projektu:
-- Grupa docelowa:
-- Glowny problem, ktory rozwiazujemy:
-- Frontend: React + Vite
-- Styling: SCSS
-- Routing:
-- Backend:
-- Baza danych:
-- Hosting:
-- Domena:
-- Layout: progresywny, zalezny od szerokosci ekranu
-- Strategia RWD: mobile-first
-- Breakpointy wstepne: mobile < 768px, tablet 768-1023px, desktop >= 1024px
+## Uslugi do pokazania
+- Skup aut.
+- Komis samochodowy - z jasnym rozroznieniem, ze pobierana jest oplata za posrednictwo.
+- Sprzedaz samochodow.
+- Pomoc drogowa.
 
-## MVP
-- [ ]
+## Kanaly i przejscia zewnetrzne
+- Social media maja byc latwo dostepne z poziomu strony.
+- Portale zewnetrzne z ogloszeniami maja byc mocno wyeksponowane.
+- Aplikacja ma byc pokazana jako osobny, ale powiazany element ekosystemu marki.
+- Sklep z kosmetykami ma byc przedstawiony jako osobna marka producenta.
 
-## Pomysly na pozniej
-- [ ]
+## Aplikacja i wycena AI
+- Nie wdrazac na tej stronie glownej osobnej wyceny AI, jesli logika liczenia ma byc inna niz w aplikacji.
+- Na stronie glownej lepiej kierowac do aplikacji i do kontaktu w sprawie wyceny.
+- Aplikacja ma byc komunikowana jako miejsce do przegladania bazy samochodow i korzystania z dodatkowych narzedzi.
 
-## Notatki
-- Layout ma byc progresywny i reagowac na szerokosc ekranu.
-- Web / desktop: szeroki uklad z pelna kompozycja sekcji.
-- Tablet: uklad posredni, wiecej oddechu, czesciowo 2-kolumnowy.
-- Telefon: waski uklad, priorytet tresci i pionowy flow.
-- Sekcje maja zmieniac hierarchie, gestosc i uklad zamiast byc projektowane jako osobne strony dla urzadzen.
-- Startowy szkielet strony: hero, sekcja podejscia, przeglad sekcji do dalszego rozwoju.
-- Responsywnosc realizujemy przez wspolne breakpointy i mixiny w SCSS.
+## Opinie i social proof
+- Opinie z wizytowki Google sa jednym z glownych elementow budowania zaufania.
+- Na stronie ma pojawic sie sekcja z opiniami klientow.
+- Wysoko na stronie powinien byc widoczny link do wizytowki Google.
+- W hero lub bezposrednio pod nim warto pokazac trust bar z ocena, liczba opinii i odnosnikami do Google oraz innych kanalow.
+
+## Proponowana struktura strony glownej
+- Hero.
+- Trust bar: Google, social media, portale z ogloszeniami.
+- Nasze uslugi.
+- Jak to dziala.
+- Dlaczego warto nam zaufac.
+- Opinie klientow.
+- Gdzie oglądac nasze auta / ogloszenia zewnetrzne.
+- Aplikacja.
+- Kosmetyki.
+- Obszar dzialania.
+- FAQ.
+- Kontakt.
+
+## Zasady tresci
+- Nie prowadzic agresywnej komunikacji sprzedazowej.
+- Wyraznie odrozniac skup od komisu.
+- Eksponowac zaufanie, lokalnosc i realne procesy.
+- Wysoko umieszczac linki do Google, social media i portali z autami.
