@@ -3,17 +3,18 @@
   --breakpoint-tablet: 768px;
   --breakpoint-desktop: 1024px;
 
-  --text: #5d574f;
-  --text-h: #201c17;
-  --bg: #f7f2ea;
-  --surface: #fffaf3;
-  --surface-soft: rgba(255, 250, 243, 0.8);
-  --border: #ddd2c3;
-  --code-bg: #efe5d8;
-  --accent: #a14f2f;
-  --accent-bg: rgba(161, 79, 47, 0.12);
-  --accent-border: rgba(161, 79, 47, 0.45);
-  --shadow: rgba(44, 31, 20, 0.1) 0 14px 32px -16px;
+  --text: #c8d1de;
+  --text-h: #f4f7fb;
+  --bg: #07142f;
+  --surface: #0d2147;
+  --surface-soft: rgba(13, 33, 71, 0.84);
+  --border: rgba(214, 223, 239, 0.18);
+  --code-bg: #102750;
+  --accent: #f58a1f;
+  --accent-strong: #ffbf48;
+  --accent-bg: rgba(245, 138, 31, 0.14);
+  --accent-border: rgba(255, 191, 72, 0.28);
+  --shadow: rgba(1, 7, 22, 0.42) 0 18px 36px -18px;
 
   --space-1: 0.5rem;
   --space-2: 0.75rem;
@@ -25,8 +26,8 @@
   --radius-lg: 1rem;
   --radius-xl: 1.5rem;
 
-  --font-body: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  --font-heading: Georgia, 'Times New Roman', serif;
+  --font-body: 'Trebuchet MS', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  --font-heading: 'Arial Black', 'Trebuchet MS', sans-serif;
   --font-mono: 'Cascadia Code', Consolas, monospace;
 
   color: var(--text);

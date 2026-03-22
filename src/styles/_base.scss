@@ -1,9 +1,13 @@
 @use './breakpoints' as bp;
 
-body {
+body,
+#root {
   background:
-    radial-gradient(circle at top, rgba(214, 169, 130, 0.22), transparent 32%),
-    linear-gradient(180deg, #fcf7f1 0%, var(--bg) 100%);
+    radial-gradient(circle at top right, rgba(149, 193, 255, 0.24), transparent 26%),
+    radial-gradient(circle at 18% 48%, rgba(104, 154, 255, 0.2), transparent 24%),
+    radial-gradient(circle at 12% 22%, rgba(135, 182, 255, 0.16), transparent 30%),
+    radial-gradient(circle at 82% 78%, rgba(245, 138, 31, 0.06), transparent 24%),
+    linear-gradient(180deg, #040d20 0%, var(--bg) 100%);
 }
 
 #root {
@@ -12,8 +16,6 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
-  border-inline: 1px solid rgba(221, 210, 195, 0.8);
-  background: color-mix(in srgb, var(--surface) 92%, white 8%);
 }
 
 main {

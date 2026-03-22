@@ -23,6 +23,7 @@
   background: var(--surface-soft);
   padding: var(--space-4);
   overflow: hidden;
+  box-shadow: var(--shadow);
 
   @include bp.tablet-up {
     padding: var(--space-5);
@@ -40,9 +41,12 @@
   align-items: flex-start;
   min-height: 55svh;
   justify-content: flex-end;
-  background:
-    radial-gradient(circle at top right, rgba(161, 79, 47, 0.18), transparent 28%),
-    linear-gradient(180deg, rgba(255, 250, 243, 0.96) 0%, rgba(244, 232, 215, 0.72) 100%);
+  border: 1px solid rgba(214, 223, 239, 0.12);
+  box-shadow:
+    0 20px 40px -24px rgba(1, 7, 22, 0.7),
+    0 0 0 1px rgba(255, 191, 72, 0.04),
+    0 0 48px rgba(245, 138, 31, 0.08);
+  background: linear-gradient(180deg, rgba(13, 33, 71, 0.94) 0%, rgba(7, 20, 47, 0.9) 100%);
 
   @include bp.tablet-up {
     min-height: 42rem;
@@ -66,8 +70,8 @@
   width: 16rem;
   aspect-ratio: 1;
   border-radius: 50%;
-  background: rgba(161, 79, 47, 0.09);
-  filter: blur(6px);
+  background: rgba(245, 138, 31, 0.12);
+  filter: blur(18px);
 }
 
 .eyebrow {
@@ -76,9 +80,9 @@
   gap: 0.5rem;
   padding: 0.55rem 0.9rem;
   border-radius: 999px;
-  background: rgba(255, 250, 243, 0.72);
-  border: 1px solid rgba(161, 79, 47, 0.18);
-  color: var(--accent);
+  background: rgba(214, 223, 239, 0.06);
+  border: 1px solid rgba(214, 223, 239, 0.14);
+  color: var(--text-h);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.08em;
@@ -157,14 +161,14 @@
 }
 
 .button--primary {
-  color: #fffaf3;
-  background: var(--accent);
+  color: #08162f;
+  background: linear-gradient(135deg, var(--accent-strong) 0%, var(--accent) 100%);
 }
 
 .button--secondary {
   color: var(--text-h);
   border-color: var(--border);
-  background: rgba(255, 250, 243, 0.72);
+  background: rgba(214, 223, 239, 0.06);
 }
 
 .intro-grid,
@@ -185,7 +189,7 @@
 
 .section-kicker {
   margin-bottom: 0.85rem;
-  color: var(--accent);
+  color: var(--text);
   font-size: 0.82rem;
   font-weight: 700;
   letter-spacing: 0.12em;
@@ -216,12 +220,12 @@
   padding: var(--space-4);
   border: 1px solid var(--border);
   border-radius: var(--radius-lg);
-  background: rgba(255, 250, 243, 0.66);
+  background: linear-gradient(180deg, rgba(14, 35, 76, 0.94) 0%, rgba(8, 22, 50, 0.86) 100%);
   text-align: left;
 }
 
 .panel--feature {
-  background: linear-gradient(180deg, rgba(255, 248, 238, 0.96) 0%, rgba(248, 239, 228, 0.92) 100%);
+  background: linear-gradient(180deg, rgba(20, 46, 98, 0.98) 0%, rgba(10, 26, 57, 0.94) 100%);
 }
 
 .stack-list {
@@ -234,7 +238,7 @@
 
 .stack-list li {
   padding-bottom: 0.9rem;
-  border-bottom: 1px solid rgba(221, 210, 195, 0.9);
+  border-bottom: 1px solid rgba(214, 223, 239, 0.14);
 
   &:last-child {
     padding-bottom: 0;
