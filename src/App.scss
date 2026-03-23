@@ -233,12 +233,7 @@
   }
 
   @include bp.desktop-up {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    grid-template-areas:
-      'eyebrow actions'
-      'copy actions';
-    align-items: start;
+    align-items: flex-start;
   }
 }
 
@@ -281,42 +276,39 @@
   z-index: 1;
   max-width: 34rem;
   min-width: 0;
+  margin-bottom: auto;
 }
 
-.hero-text {
-  max-width: 40rem;
-  font-size: 1rem;
+.hero-copy h1 span {
+  display: block;
+}
 
-  @media (max-width: 359px) {
-    font-size: 0.94rem;
-  }
+.hero-subheading {
+  margin: 0;
+  color: var(--text);
+  font-size: 0.98rem;
+  font-weight: 500;
+  line-height: 1.35;
 
   @include bp.tablet-up {
-    font-size: 1.08rem;
+    font-size: 1.04rem;
   }
 }
 
 .hero-actions {
   position: relative;
   z-index: 1;
-  display: flex;
+  display: grid;
   width: 100%;
-  flex-direction: column;
   gap: 0.75rem;
+  grid-template-columns: 1fr;
 
   @include bp.tablet-up {
-    width: auto;
-    flex-direction: row;
-    flex-wrap: wrap;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 
   @include bp.desktop-up {
-    grid-area: actions;
-    align-self: start;
-    justify-self: end;
-    flex-direction: column;
-    align-items: stretch;
-    width: 15rem;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 

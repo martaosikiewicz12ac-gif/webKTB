@@ -88,3 +88,8 @@
 - Wyraznie odrozniac skup od komisu.
 - Eksponowac zaufanie, lokalnosc i realne procesy.
 - Wysoko umieszczac linki do Google, social media i portali z autami.
+
+## Notatki do hero
+- Motyw lokalizacji typu `Kolorowa 12, 67-200 Glogow` bardzo dobrze dziala jako detal i daje dobry klimat marki.
+- Na ten moment nie uzywac lokalizacji bezposrednio w hero.
+- Warto wrocic do tego motywu pozniej i rozwazyc go w innej sekcji albo w subtelniejszej formie.

@@ -76,11 +76,12 @@ function App() {
 
       <div className="page-shell__inner">
         <section className="hero-section section-block">
-          <div className="eyebrow">Kolorowa 12, 67-200 Głogów</div>
           <div className="hero-copy">
-            <p className="section-kicker">Skup aut, sprzedaż samochodów, autokomis</p>
-            <h1>Samochody, które sprzedają się dobrze.</h1>
-            <p className="hero-text">Skupujemy auta, prowadzimy autokomis i sprzedajemy samochody w nowoczesny sposób.</p>
+            <h1>
+              <span>Dobre auta nie</span>
+              <span>stoją długo!</span>
+            </h1>
+            <p className="hero-subheading">My tylko przyspieszamy sprawy.</p>
           </div>
           <div className="hero-actions">
             <a href="#services" className="button button--secondary">
