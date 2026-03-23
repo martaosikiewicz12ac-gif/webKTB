@@ -1,3 +1,4 @@
+import logo from './images/logo2.png'
 import './App.scss'
 
 const services = [
@@ -46,8 +47,11 @@ function App() {
       <header className="site-header site-band">
         <div className="site-band__inner">
           <a href="#top" className="site-brand">
-            <span className="site-brand__title">Kupię Twoją Brykę</span>
-            <span className="site-brand__meta">Głogów i okolice</span>
+            <img src={logo} alt="Kupię Twoją Brykę" className="site-brand__logo" />
+            <span className="site-brand__copy">
+              <span className="site-brand__title">Kupię Twoją Brykę</span>
+              <span className="site-brand__meta">Głogów i okolice</span>
+            </span>
           </a>
           <nav className="site-nav" aria-label="Główne menu">
             <a href="#services" className="site-nav__link">
