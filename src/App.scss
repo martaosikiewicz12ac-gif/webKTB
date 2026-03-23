@@ -51,7 +51,7 @@
     inset 0 -1px 0 rgba(4, 13, 32, 0.24);
 
   @media (max-width: 359px) {
-    padding: 1.15rem;
+    // padding: 1.15rem;
     border-radius: 1.2rem;
   }
 
@@ -201,8 +201,9 @@
 }
 
 .site-nav__link--cta {
-  background: linear-gradient(135deg, rgba(255, 191, 72, 0.95) 0%, rgba(245, 138, 31, 0.95) 100%);
-  color: #08162f;
+  // background: linear-gradient(135deg, rgba(255, 191, 72, 0.95) 0%, rgba(245, 138, 31, 0.95) 100%);
+  background: linear-gradient(135deg, rgba(255, 191, 72, 0.4) 0%, rgba(245, 138, 31, 0.2) 50%);
+  // color: #08162f;
 }
 
 .hero-section {
@@ -211,18 +212,19 @@
   gap: var(--space-4);
   align-items: flex-start;
   min-height: 55svh;
-  justify-content: flex-end;
+  justify-content: flex-start;
   box-shadow:
     0 24px 44px -24px rgba(1, 7, 22, 0.76),
     inset 0 1px 0 rgba(214, 223, 239, 0.1),
     inset 0 -1px 0 rgba(4, 13, 32, 0.28),
     0 0 42px rgba(104, 154, 255, 0.08);
   background:
-    radial-gradient(circle at top right, rgba(149, 193, 255, 0.08), transparent 28%),
-    linear-gradient(180deg, rgba(16, 40, 86, 0.95) 0%, rgba(9, 24, 54, 0.88) 100%);
+    linear-gradient(90deg, rgba(5, 14, 34, 0.92) 0%, rgba(5, 14, 34, 0.62) 34%, rgba(5, 14, 34, 0.16) 66%),
+    linear-gradient(180deg, rgba(8, 22, 50, 0.22) 0%, rgba(8, 22, 50, 0.52) 100%),
+    url('./images/hero2.jpg') center/cover no-repeat;
 
   @include bp.tablet-up {
-    min-height: 38rem;
+    min-height: 39rem;
     gap: var(--space-5);
   }
 
@@ -232,11 +234,11 @@
 
   @include bp.desktop-up {
     display: grid;
-    grid-template-columns: minmax(0, 1.35fr) minmax(18rem, 0.65fr);
+    grid-template-columns: minmax(0, 1fr) auto;
     grid-template-areas:
       'eyebrow actions'
       'copy actions';
-    align-items: end;
+    align-items: start;
   }
 }
 
@@ -277,12 +279,8 @@
 .hero-copy {
   position: relative;
   z-index: 1;
-  max-width: 42rem;
+  max-width: 34rem;
   min-width: 0;
-
-  @include bp.desktop-up {
-    grid-area: copy;
-  }
 }
 
 .hero-text {
@@ -314,11 +312,11 @@
 
   @include bp.desktop-up {
     grid-area: actions;
-    align-self: center;
+    align-self: start;
     justify-self: end;
-    width: 100%;
-    max-width: 18rem;
     flex-direction: column;
+    align-items: stretch;
+    width: 15rem;
   }
 }
 
@@ -372,7 +370,9 @@
 
 .button--secondary {
   color: var(--text-h);
-  background: rgba(214, 223, 239, 0.06);
+  border-color: rgba(255, 147, 147, 0.18);
+  // background: rgb(245, 95, 31, 0.3);
+  background: linear-gradient(135deg, rgba(255, 191, 72, 0.7) 0%, rgba(245, 138, 31, 0.4) 50%);
 }
 
 .section-kicker {

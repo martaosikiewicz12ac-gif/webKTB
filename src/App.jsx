@@ -78,20 +78,16 @@ function App() {
         <section className="hero-section section-block">
           <div className="eyebrow">Kolorowa 12, 67-200 Głogów</div>
           <div className="hero-copy">
-            <p className="section-kicker">Skup, komis, sprzedaż i pomoc drogowa</p>
-            <h1>Kupię Twoją Brykę - motoryzacyjny hub marki.</h1>
-            <p className="hero-text">
-              W jednym miejscu pokazujemy nasze usługi, aktualne kanały sprzedaży,
-              opinie klientów i szybkie przejścia do social mediów, portali
-              ogłoszeniowych, aplikacji oraz powiązanych marek.
-            </p>
+            <p className="section-kicker">Skup aut, sprzedaż samochodów, autokomis</p>
+            <h1>Samochody, które sprzedają się dobrze.</h1>
+            <p className="hero-text">Skupujemy auta, prowadzimy autokomis i sprzedajemy samochody w nowoczesny sposób.</p>
           </div>
           <div className="hero-actions">
-            <a href="#services" className="button button--primary">
-              Zobacz usługi
+            <a href="#services" className="button button--secondary">
+              Zobacz samochody
             </a>
             <a href="#links" className="button button--secondary">
-              Przejdź do linków
+              Sprzedaj auto
             </a>
           </div>
         </section>
