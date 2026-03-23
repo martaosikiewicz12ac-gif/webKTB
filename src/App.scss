@@ -121,7 +121,8 @@
   box-shadow:
     0 0 30px rgba(149, 193, 255, 0.18),
     0 8px 18px -12px rgba(1, 7, 22, 0.45),
-    inset 0 1px 0 rgba(255, 255, 255, 0.72),
+    inset 1px 1px 1px rgba(240, 255, 71, 0.2),
+    // inset -4px 4px 18px -12px rgba(255, 255, 255, 0.72),
     inset 0 -1px 0 rgba(96, 118, 156, 0.22);
   object-fit: contain;
   flex: 0 0 auto;
