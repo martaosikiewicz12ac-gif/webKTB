@@ -186,6 +186,20 @@
   }
 }
 
+.site-nav__label--short {
+  display: none;
+}
+
+@media (max-width: 479px) {
+  .site-nav__label--full {
+    display: none;
+  }
+
+  .site-nav__label--short {
+    display: inline;
+  }
+}
+
 .site-nav__link--cta {
   background: linear-gradient(135deg, rgba(255, 191, 72, 0.95) 0%, rgba(245, 138, 31, 0.95) 100%);
   color: #08162f;

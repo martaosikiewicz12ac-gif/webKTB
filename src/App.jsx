@@ -55,16 +55,20 @@ function App() {
           </a>
           <nav className="site-nav" aria-label="Główne menu">
             <a href="#services" className="site-nav__link">
-              Usługi
+              <span className="site-nav__label site-nav__label--full">Autokomis</span>
+              <span className="site-nav__label site-nav__label--short">Komis</span>
             </a>
             <a href="#reviews" className="site-nav__link">
-              Opinie
+              <span className="site-nav__label site-nav__label--full">Skup aut</span>
+              <span className="site-nav__label site-nav__label--short">Skup</span>
             </a>
             <a href="#links" className="site-nav__link">
-              Linki
+              <span className="site-nav__label site-nav__label--full">Pomoc drogowa</span>
+              <span className="site-nav__label site-nav__label--short">Pomoc</span>
             </a>
             <a href="#contact" className="site-nav__link site-nav__link--cta">
-              Kontakt
+              <span className="site-nav__label site-nav__label--full">Kontakt</span>
+              <span className="site-nav__label site-nav__label--short">Kontakt</span>
             </a>
           </nav>
         </div>
