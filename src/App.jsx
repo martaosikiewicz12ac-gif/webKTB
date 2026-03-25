@@ -1,25 +1,33 @@
 import logo from './images/logo2.png'
+import serviceSprzedaz from './images/Sprzedaż.png'
+import serviceSkup from './images/Skup.png'
+import serviceKomis from './images/Komis.png'
+import servicePomoc from './images/Pomoc.png'
 import './App.scss'
 
 const services = [
   {
     title: 'Sprzedaż samochodów',
-    text: 'Aktualne oferty aut, publikacje w aplikacji i obecność na zewnętrznych portalach.',
+    image: serviceSprzedaz,
+    imageAlt: 'Sprzedaż samochodów',
     href: '#',
   },
   {
     title: 'Skup aut',
-    text: 'Szybka sprzedaż auta w Głogowie i okolicy, także dla samochodów starszych lub wymagających napraw.',
+    image: serviceSkup,
+    imageAlt: 'Skup aut',
     href: '#',
   },
   {
     title: 'Komis',
-    text: 'Zostawiasz auto u nas, a my prowadzimy sprzedaż i pobieramy opłatę za pośrednictwo.',
+    image: serviceKomis,
+    imageAlt: 'Komis samochodowy',
     href: '#',
   },
   {
     title: 'Pomoc drogowa',
-    text: 'Wsparcie dla kierowców z regionu, gdy liczy się szybki kontakt i sprawna reakcja.',
+    image: servicePomoc,
+    imageAlt: 'Pomoc drogowa',
     href: '#',
   },
 ]
@@ -95,17 +103,19 @@ function App() {
 
         <section className="section-block content-section" id="services">
           <div className="section-heading">
-            <p className="section-kicker">Usługi</p>
-            <h2>Najważniejsze obszary działalności z krótkim wejściem do dalszych treści.</h2>
+            <h2>Sprawdź, w czym możemy Ci pomóc</h2>
           </div>
           <div className="sections-grid sections-grid--services">
             {services.map((service) => (
-              <article key={service.title} className="panel">
-                <h3>{service.title}</h3>
-                <p>{service.text}</p>
-                <a href={service.href} className="text-link">
-                  Zobacz więcej
-                </a>
+              <article key={service.title} className="panel panel--service">
+                <div className="service-copy">
+                  <h3>{service.title}</h3>
+                </div>
+                <div className="service-visual">
+                  <a href={service.href} className="service-media" aria-label={service.title}>
+                    <img src={service.image} alt={service.imageAlt} className="service-media__image" />
+                  </a>
+                </div>
               </article>
             ))}
           </div>

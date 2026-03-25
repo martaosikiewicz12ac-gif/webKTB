@@ -221,7 +221,7 @@
   background:
     linear-gradient(90deg, rgba(5, 14, 34, 0.92) 0%, rgba(5, 14, 34, 0.62) 34%, rgba(5, 14, 34, 0.16) 66%),
     linear-gradient(180deg, rgba(8, 22, 50, 0.22) 0%, rgba(8, 22, 50, 0.52) 100%),
-    url('./images/hero2.jpg') center/cover no-repeat;
+    url('./images/hero2.jpg') center / cover no-repeat;
 
   @include bp.tablet-up {
     min-height: 39rem;
@@ -514,9 +514,66 @@
   background: linear-gradient(180deg, rgba(18, 42, 90, 0.96) 0%, rgba(9, 24, 54, 0.9) 100%);
 }
 
+.panel--service {
+  display: grid;
+  gap: 1rem;
+  grid-template-rows: auto 1fr;
+}
+
+.service-copy {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 3.5rem;
+  text-align: center;
+}
+
+.service-copy h3 {
+  margin: 0;
+}
+
+.service-visual {
+  display: grid;
+}
+
 .panel--teaser,
 .panel--contact {
   height: 100%;
+}
+
+.service-media {
+  display: block;
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg) - 0.35rem);
+  box-shadow:
+    0 18px 32px -28px rgba(1, 7, 22, 0.8),
+    inset 0 1px 0 rgba(214, 223, 239, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow:
+      0 24px 34px -26px rgba(1, 7, 22, 0.85),
+      inset 0 1px 0 rgba(214, 223, 239, 0.1);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+  }
+}
+
+.service-media__image {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+@media (max-width: 479px) {
+  .service-copy {
+    min-height: auto;
+  }
 }
 
 .stack-list {
