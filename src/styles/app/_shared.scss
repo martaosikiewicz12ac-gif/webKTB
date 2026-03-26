@@ -1,0 +1,68 @@
+@use '../breakpoints' as bp;
+
+.section-kicker {
+  margin-bottom: 0.85rem;
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.section-heading {
+  max-width: 42rem;
+}
+
+.content-section {
+  display: grid;
+  gap: var(--space-4);
+}
+
+.text-link {
+  color: var(--text-h);
+  text-decoration: none;
+}
+.split-section {
+  display: grid;
+  gap: var(--space-3);
+
+  @include bp.tablet-up {
+    gap: var(--space-4);
+  }
+}
+
+.split-section {
+  @include bp.desktop-up {
+    grid-template-columns: 1.1fr 0.9fr;
+  }
+}
+
+.sections-grid,
+.footer-grid {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.sections-grid {
+  @include bp.tablet-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  @include bp.desktop-up {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.9rem;
+  padding: var(--space-4);
+  border-radius: var(--radius-lg);
+  background: linear-gradient(180deg, rgba(14, 35, 76, 0.94) 0%, rgba(8, 22, 50, 0.86) 100%);
+  text-align: left;
+  box-shadow:
+    0 16px 30px -24px rgba(1, 7, 22, 0.72),
+    inset 0 1px 0 rgba(214, 223, 239, 0.07),
+    inset 0 -1px 0 rgba(4, 13, 32, 0.22);
+}
