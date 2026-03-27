@@ -7,8 +7,11 @@ function LinksSection({ quickLinks }) {
       </div>
       <div className="link-hub">
         {quickLinks.map((link) => (
-          <a key={link.label} href={link.href} className="hub-link">
-            {link.label}
+          <a key={link.label} href={link.href} className={`hub-link hub-link--${link.brand}`} aria-label={link.label}>
+            <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
+              <img src={link.icon} alt="" className="hub-link__icon" />
+            </span>
+            <span className="hub-link__label">{link.label}</span>
           </a>
         ))}
       </div>

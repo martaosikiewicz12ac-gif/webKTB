@@ -3,6 +3,13 @@ import serviceSprzedaz from './images/Sprzedaż.webp'
 import serviceSkup from './images/Skup.webp'
 import serviceKomis from './images/Komis.webp'
 import servicePomoc from './images/Pomoc.webp'
+import facebookIcon from './images/icons/facebook.svg'
+import instagramIcon from './images/icons/instagram.svg'
+import tiktokIcon from './images/icons/tiktok.svg'
+import olxIcon from './images/icons/olx.png'
+import allegroIcon from './images/icons/allegro.svg'
+import autoplacIcon from './images/icons/autoplac.png'
+import appIcon from './images/icon2.png'
 import Header from './components/Header.jsx'
 import HeroSection from './components/HeroSection.jsx'
 import ServicesSection from './components/ServicesSection.jsx'
@@ -40,14 +47,13 @@ const services = [
 ]
 
 const quickLinks = [
-  { label: 'Opinie Google', href: 'https://share.google/dHO6GA26s4VlZwUfH' },
-  { label: 'Facebook', href: '#' },
-  { label: 'Instagram', href: '#' },
-  { label: 'TikTok', href: '#' },
-  { label: 'OLX', href: '#' },
-  { label: 'Allegro', href: '#' },
-  { label: 'Autoplac', href: '#' },
-  { label: 'Aplikacja', href: '#' },
+  { label: 'Facebook', href: '#', icon: facebookIcon, brand: 'facebook' },
+  { label: 'Instagram', href: '#', icon: instagramIcon, brand: 'instagram' },
+  { label: 'TikTok', href: '#', icon: tiktokIcon, brand: 'tiktok' },
+  { label: 'OLX', href: '#', icon: olxIcon, brand: 'olx' },
+  { label: 'Allegro', href: '#', icon: allegroIcon, brand: 'allegro' },
+  { label: 'Autoplac', href: '#', icon: autoplacIcon, brand: 'autoplac' },
+  { label: 'Aplikacja', href: '#', icon: appIcon, brand: 'app' },
 ]
 
 const reviewsData = {
