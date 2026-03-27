@@ -9,7 +9,7 @@ import tiktokIcon from './images/icons/tiktok.svg'
 import olxIcon from './images/icons/olx.png'
 import allegroIcon from './images/icons/allegro.svg'
 import autoplacIcon from './images/icons/autoplac.png'
-import appIcon from './images/icon2.png'
+import appIcon from './images/icon.png'
 import Header from './components/Header.jsx'
 import HeroSection from './components/HeroSection.jsx'
 import ServicesSection from './components/ServicesSection.jsx'
@@ -46,14 +46,24 @@ const services = [
   },
 ]
 
-const quickLinks = [
-  { label: 'Facebook', href: '#', icon: facebookIcon, brand: 'facebook' },
-  { label: 'Instagram', href: '#', icon: instagramIcon, brand: 'instagram' },
-  { label: 'TikTok', href: '#', icon: tiktokIcon, brand: 'tiktok' },
-  { label: 'OLX', href: '#', icon: olxIcon, brand: 'olx' },
-  { label: 'Allegro', href: '#', icon: allegroIcon, brand: 'allegro' },
-  { label: 'Autoplac', href: '#', icon: autoplacIcon, brand: 'autoplac' },
-  { label: 'Aplikacja', href: '#', icon: appIcon, brand: 'app' },
+const quickLinkGroups = [
+  {
+    title: 'Znajdziesz nas tutaj',
+    links: [
+      { label: 'Facebook', href: '#', icon: facebookIcon, brand: 'facebook' },
+      { label: 'Instagram', href: '#', icon: instagramIcon, brand: 'instagram' },
+      { label: 'TikTok', href: '#', icon: tiktokIcon, brand: 'tiktok' },
+    ],
+  },
+  {
+    title: 'Oferty znajdziesz na',
+    links: [
+      { label: 'OLX', href: '#', icon: olxIcon, brand: 'olx' },
+      { label: 'Allegro', href: '#', icon: allegroIcon, brand: 'allegro' },
+      { label: 'Autoplac', href: '#', icon: autoplacIcon, brand: 'autoplac' },
+      { label: 'Aplikacja', href: '#', icon: appIcon, brand: 'app' },
+    ],
+  },
 ]
 
 const reviewsData = {
@@ -85,7 +95,7 @@ function App() {
         <HeroSection />
         <ServicesSection services={services} />
         <ReviewsSection reviewsData={reviewsData} />
-        <LinksSection quickLinks={quickLinks} />
+        <LinksSection quickLinkGroups={quickLinkGroups} />
         <TeasersSection />
       </div>
 
