@@ -12,3 +12,66 @@
 .panel--teaser {
   height: 100%;
 }
+
+.teaser-head {
+  display: grid;
+  grid-template-columns: auto 1fr;
+  align-items: center;
+  gap: 1rem;
+}
+
+.teaser-head h3 {
+  margin: 0;
+  font-size: 0.92rem;
+  font-family: var(--font-body);
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.panel--teaser > p:last-child {
+  text-align: center;
+}
+
+.teaser-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-start;
+  width: fit-content;
+  text-decoration: none;
+  transition: transform 0.2s ease;
+
+  &:hover {
+    transform: translateY(-2px);
+  }
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 1rem;
+  }
+}
+
+.teaser-icon {
+  display: block;
+  width: 4rem;
+  height: 4rem;
+  object-fit: contain;
+}
+
+.teaser-icon--app {
+  width: 3.2rem;
+  height: 3.2rem;
+  border-radius: 0.9rem;
+}
+
+.teaser-icon--sztos {
+  width: auto;
+  max-width: 8.5rem;
+  height: 3.4rem;
+}
+
+@media (max-width: 479px) {
+  .teaser-head {
+    gap: 0.85rem;
+  }
+}
