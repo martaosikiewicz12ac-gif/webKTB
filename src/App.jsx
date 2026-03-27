@@ -50,11 +50,25 @@ const quickLinks = [
   { label: 'Aplikacja', href: '#' },
 ]
 
-const reviewHighlights = [
-  'Opinie z wizytówki Google budują zaufanie już na wejściu.',
-  'Sekcja ma prowadzić do pełnej wizytówki i realnych doświadczeń klientów.',
-  'To tutaj docelowo pokażemy ocenę, liczbę opinii i wybrane cytaty.',
-]
+const reviewsData = {
+  score: '4,5',
+  source: 'Na podstawie opinii w Google',
+  linkLabel: 'Sprawdź opinie',
+  items: [
+    {
+      author: 'Mateusz K.',
+      text: 'Bardzo sprawny kontakt, konkretna rozmowa i uczciwe podejście do całego procesu.',
+    },
+    {
+      author: 'Anna W.',
+      text: 'Miła obsługa, szybko ustalone szczegóły i bez niepotrzebnego przeciągania tematu.',
+    },
+    {
+      author: 'Tomasz R.',
+      text: 'Dobra komunikacja i profesjonalne podejście. Wszystko przebiegło spokojnie i jasno.',
+    },
+  ],
+}
 
 function App() {
   return (
@@ -64,7 +78,7 @@ function App() {
       <div className="page-shell__inner">
         <HeroSection />
         <ServicesSection services={services} />
-        <ReviewsSection reviewHighlights={reviewHighlights} />
+        <ReviewsSection reviewsData={reviewsData} />
         <LinksSection quickLinks={quickLinks} />
         <TeasersSection />
       </div>
