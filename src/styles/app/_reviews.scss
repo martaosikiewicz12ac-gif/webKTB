@@ -76,34 +76,6 @@
   color: var(--text-h);
 }
 
-.stack-list {
-  display: grid;
-  gap: 0.9rem;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-}
-
-.stack-list li {
-  padding-bottom: 0.9rem;
-  border-bottom: 1px solid rgba(214, 223, 239, 0.14);
-}
-
-.stack-list li:last-child {
-  padding-bottom: 0;
-  border-bottom: 0;
-}
-
-.stack-list strong {
-  display: block;
-  margin-bottom: 0.45rem;
-  color: var(--text-h);
-}
-
-.stack-list--compact li {
-  padding-bottom: 0.7rem;
-}
-
 .inline-cta {
   justify-self: start;
 }

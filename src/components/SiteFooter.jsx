@@ -1,3 +1,10 @@
+const footerLinks = [
+  { href: '#', label: 'Autokomis' },
+  { href: '#', label: 'Pomoc drogowa' },
+  { href: '#', label: 'Sztos' },
+  { href: '#contact', label: 'Kontakt' },
+]
+
 function SiteFooter() {
   return (
     <footer className="site-footer site-band" id="contact">
@@ -6,18 +13,11 @@ function SiteFooter() {
           Kupię Twoją Brykę
         </a>
         <div className="footer-strip">
-          <a href="#" className="footer-heading">
-            Autokomis
-          </a>
-          <a href="#" className="footer-heading">
-            Pomoc drogowa
-          </a>
-          <a href="#" className="footer-heading">
-            Sztos
-          </a>
-          <a href="#contact" className="footer-heading">
-            Kontakt
-          </a>
+          {footerLinks.map((link) => (
+            <a key={link.label} href={link.href} className="footer-heading">
+              {link.label}
+            </a>
+          ))}
         </div>
       </div>
     </footer>

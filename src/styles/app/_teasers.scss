@@ -28,6 +28,17 @@
   line-height: 1.25;
 }
 
+.teaser-title-link {
+  color: inherit;
+  text-decoration: none;
+
+  &:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 4px;
+    border-radius: 0.5rem;
+  }
+}
+
 .panel--teaser > p:last-child {
   text-align: center;
 }

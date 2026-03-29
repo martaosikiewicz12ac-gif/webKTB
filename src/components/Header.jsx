@@ -1,3 +1,27 @@
+const navLinks = [
+  {
+    href: '#services',
+    fullLabel: 'Autokomis',
+    shortLabel: 'Komis',
+  },
+  {
+    href: '#reviews',
+    fullLabel: 'Skup aut',
+    shortLabel: 'Skup',
+  },
+  {
+    href: '#links',
+    fullLabel: 'Pomoc drogowa',
+    shortLabel: 'Pomoc',
+  },
+  {
+    href: '#contact',
+    fullLabel: 'Kontakt',
+    shortLabel: 'Kontakt',
+    isCta: true,
+  },
+]
+
 function Header({ logoSrc }) {
   return (
     <header className="site-header site-band">
@@ -10,22 +34,16 @@ function Header({ logoSrc }) {
           </span>
         </a>
         <nav className="site-nav" aria-label="Główne menu">
-          <a href="#services" className="site-nav__link">
-            <span className="site-nav__label site-nav__label--full">Autokomis</span>
-            <span className="site-nav__label site-nav__label--short">Komis</span>
-          </a>
-          <a href="#reviews" className="site-nav__link">
-            <span className="site-nav__label site-nav__label--full">Skup aut</span>
-            <span className="site-nav__label site-nav__label--short">Skup</span>
-          </a>
-          <a href="#links" className="site-nav__link">
-            <span className="site-nav__label site-nav__label--full">Pomoc drogowa</span>
-            <span className="site-nav__label site-nav__label--short">Pomoc</span>
-          </a>
-          <a href="#contact" className="site-nav__link site-nav__link--cta">
-            <span className="site-nav__label site-nav__label--full">Kontakt</span>
-            <span className="site-nav__label site-nav__label--short">Kontakt</span>
-          </a>
+          {navLinks.map((link) => (
+            <a
+              key={link.href}
+              href={link.href}
+              className={`site-nav__link${link.isCta ? ' site-nav__link--cta' : ''}`}
+            >
+              <span className="site-nav__label site-nav__label--full">{link.fullLabel}</span>
+              <span className="site-nav__label site-nav__label--short">{link.shortLabel}</span>
+            </a>
+          ))}
         </nav>
       </div>
     </header>
