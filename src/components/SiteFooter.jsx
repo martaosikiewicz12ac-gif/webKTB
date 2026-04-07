@@ -1,14 +1,14 @@
-function SiteFooter({ isRoadsidePage }) {
-  const homeSectionPrefix = isRoadsidePage ? '/#' : '#'
+function SiteFooter({ isInnerPage }) {
+  const homeSectionPrefix = isInnerPage ? '/#' : '#'
   const footerLinks = [
     { href: `${homeSectionPrefix}services`, label: 'Autokomis' },
     { href: '/pomoc-drogowa', label: 'Pomoc drogowa' },
     { href: '#', label: 'Sztos' },
-    { href: `${homeSectionPrefix}contact`, label: 'Kontakt' },
+    { href: '/kontakt', label: 'Kontakt' },
   ]
 
   return (
-    <footer className="site-footer site-band" id="contact">
+    <footer className="site-footer site-band">
       <div className="site-band__inner site-band__inner--footer">
         <a href="#top" className="footer-heading footer-heading--brand">
           Kupię Twoją Brykę

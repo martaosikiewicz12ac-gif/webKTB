@@ -13,6 +13,7 @@ import appIcon from './images/icon.png'
 import Header from './components/Header.jsx'
 import HomePage from './components/HomePage.jsx'
 import RoadsidePage from './components/RoadsidePage.jsx'
+import ContactPage from './components/ContactPage.jsx'
 import SiteFooter from './components/SiteFooter.jsx'
 import './App.scss'
 
@@ -83,19 +84,36 @@ const reviewsData = {
   ],
 }
 
+const contactData = {
+  companyName: 'Kupię Twoją Brykę',
+  email: 'kupietwojabryke@gmail.com',
+  address: 'Kolorowa 12, 67-200 Głogów',
+  phones: [
+    { raw: '505922020', display: '505 922 020' },
+    { raw: '517576780', display: '517 576 780' },
+  ],
+  primaryPhone: { raw: '505922020', display: '505 922 020' },
+  mapLink: 'https://www.google.com/maps/search/?api=1&query=Kolorowa+12,+67-200+G%C5%82og%C3%B3w',
+  mapEmbedSrc: 'https://www.google.com/maps?q=Kolorowa+12,+67-200+G%C5%82og%C3%B3w&z=15&output=embed',
+}
+
 function App() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
   const isRoadsidePage = normalizedPath === '/pomoc-drogowa'
+  const isContactPage = normalizedPath === '/kontakt'
+  const isInnerPage = isRoadsidePage || isContactPage
 
   return (
     <main className="page-shell" id="top">
-      <Header logoSrc={logo} isRoadsidePage={isRoadsidePage} />
+      <Header logoSrc={logo} isInnerPage={isInnerPage} />
       {isRoadsidePage ? (
         <RoadsidePage />
+      ) : isContactPage ? (
+        <ContactPage contactData={contactData} />
       ) : (
         <HomePage services={services} reviewsData={reviewsData} quickLinkGroups={quickLinkGroups} />
       )}
-      <SiteFooter isRoadsidePage={isRoadsidePage} />
+      <SiteFooter isInnerPage={isInnerPage} />
     </main>
   )
 }

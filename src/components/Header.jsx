@@ -1,5 +1,6 @@
-function Header({ logoSrc, isRoadsidePage }) {
-  const homeSectionPrefix = isRoadsidePage ? '/#' : '#'
+function Header({ logoSrc, isInnerPage }) {
+  const homeSectionPrefix = isInnerPage ? '/#' : '#'
+  const brandHref = isInnerPage ? '/' : '#top'
   const navLinks = [
     {
       href: `${homeSectionPrefix}services`,
@@ -17,7 +18,7 @@ function Header({ logoSrc, isRoadsidePage }) {
       shortLabel: 'Pomoc',
     },
     {
-      href: `${homeSectionPrefix}contact`,
+      href: '/kontakt',
       fullLabel: 'Kontakt',
       shortLabel: 'Kontakt',
       isCta: true,
@@ -27,7 +28,7 @@ function Header({ logoSrc, isRoadsidePage }) {
   return (
     <header className="site-header site-band">
       <div className="site-band__inner">
-        <a href="#top" className="site-brand">
+        <a href={brandHref} className="site-brand">
           <img src={logoSrc} alt="Kupię Twoją Brykę" className="site-brand__logo" />
           <span className="site-brand__copy">
             <span className="site-brand__title">Kupię Twoją Brykę</span>

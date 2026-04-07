@@ -1,0 +1,89 @@
+@use '../breakpoints' as bp;
+
+.contact-layout {
+  display: grid;
+  gap: var(--space-3);
+
+  @include bp.desktop-up {
+    grid-template-columns: minmax(0, 0.95fr) minmax(0, 1.05fr);
+  }
+}
+
+.contact-panel {
+  justify-content: center;
+}
+
+.contact-company h3 {
+  margin: 0;
+}
+
+.contact-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.contact-item {
+  display: grid;
+  gap: 0.35rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(214, 223, 239, 0.14);
+}
+
+.contact-item:last-child {
+  padding-bottom: 0;
+  border-bottom: 0;
+}
+
+.contact-item__label {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.contact-item__value--stack {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.contact-link,
+.contact-address {
+  font-style: normal;
+  font-size: 1rem;
+  line-height: 1.5;
+}
+
+.contact-actions {
+  display: grid;
+  gap: 0.75rem;
+
+  @include bp.tablet-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.contact-map-panel {
+  padding: 0;
+  overflow: hidden;
+}
+
+.contact-map-frame {
+  min-height: 20rem;
+  height: 100%;
+}
+
+.contact-map-frame iframe {
+  display: block;
+  width: 100%;
+  min-height: 20rem;
+  height: 100%;
+  border: 0;
+}
+
+@media (max-width: 479px) {
+  .contact-map-frame,
+  .contact-map-frame iframe {
+    min-height: 17rem;
+  }
+}
