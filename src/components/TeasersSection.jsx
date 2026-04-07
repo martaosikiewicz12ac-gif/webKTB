@@ -12,7 +12,7 @@ const teaserItems = [
     text: 'Łączymy sprzedawców i kupujących w jednym miejscu - szybciej, prościej, bez chaosu.',
   },
   {
-    href: '#',
+    href: 'https://kosmetykisztos.pl/',
     ariaLabel: 'Przejdź do marki Sztos',
     icon: sztosLogo,
     iconAlt: 'Logo Sztos',

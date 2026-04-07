@@ -1,11 +1,12 @@
-const footerLinks = [
-  { href: '#', label: 'Autokomis' },
-  { href: '#', label: 'Pomoc drogowa' },
-  { href: '#', label: 'Sztos' },
-  { href: '#contact', label: 'Kontakt' },
-]
+function SiteFooter({ isRoadsidePage }) {
+  const homeSectionPrefix = isRoadsidePage ? '/#' : '#'
+  const footerLinks = [
+    { href: `${homeSectionPrefix}services`, label: 'Autokomis' },
+    { href: '/pomoc-drogowa', label: 'Pomoc drogowa' },
+    { href: '#', label: 'Sztos' },
+    { href: `${homeSectionPrefix}contact`, label: 'Kontakt' },
+  ]
 
-function SiteFooter() {
   return (
     <footer className="site-footer site-band" id="contact">
       <div className="site-band__inner site-band__inner--footer">

@@ -1,28 +1,29 @@
-const navLinks = [
-  {
-    href: '#services',
-    fullLabel: 'Autokomis',
-    shortLabel: 'Komis',
-  },
-  {
-    href: '#reviews',
-    fullLabel: 'Skup aut',
-    shortLabel: 'Skup',
-  },
-  {
-    href: '#links',
-    fullLabel: 'Pomoc drogowa',
-    shortLabel: 'Pomoc',
-  },
-  {
-    href: '#contact',
-    fullLabel: 'Kontakt',
-    shortLabel: 'Kontakt',
-    isCta: true,
-  },
-]
+function Header({ logoSrc, isRoadsidePage }) {
+  const homeSectionPrefix = isRoadsidePage ? '/#' : '#'
+  const navLinks = [
+    {
+      href: `${homeSectionPrefix}services`,
+      fullLabel: 'Autokomis',
+      shortLabel: 'Komis',
+    },
+    {
+      href: `${homeSectionPrefix}reviews`,
+      fullLabel: 'Skup aut',
+      shortLabel: 'Skup',
+    },
+    {
+      href: '/pomoc-drogowa',
+      fullLabel: 'Pomoc drogowa',
+      shortLabel: 'Pomoc',
+    },
+    {
+      href: `${homeSectionPrefix}contact`,
+      fullLabel: 'Kontakt',
+      shortLabel: 'Kontakt',
+      isCta: true,
+    },
+  ]
 
-function Header({ logoSrc }) {
   return (
     <header className="site-header site-band">
       <div className="site-band__inner">

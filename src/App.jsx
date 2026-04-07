@@ -11,11 +11,8 @@ import allegroIcon from './images/icons/allegro.svg'
 import autoplacIcon from './images/icons/autoplac.png'
 import appIcon from './images/icon.png'
 import Header from './components/Header.jsx'
-import HeroSection from './components/HeroSection.jsx'
-import ServicesSection from './components/ServicesSection.jsx'
-import ReviewsSection from './components/ReviewsSection.jsx'
-import LinksSection from './components/LinksSection.jsx'
-import TeasersSection from './components/TeasersSection.jsx'
+import HomePage from './components/HomePage.jsx'
+import RoadsidePage from './components/RoadsidePage.jsx'
 import SiteFooter from './components/SiteFooter.jsx'
 import './App.scss'
 
@@ -42,7 +39,7 @@ const services = [
     title: 'Pomoc drogowa',
     image: servicePomoc,
     imageAlt: 'Pomoc drogowa',
-    href: '#',
+    href: '/pomoc-drogowa',
   },
 ]
 
@@ -87,19 +84,18 @@ const reviewsData = {
 }
 
 function App() {
+  const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const isRoadsidePage = normalizedPath === '/pomoc-drogowa'
+
   return (
     <main className="page-shell" id="top">
-      <Header logoSrc={logo} />
-
-      <div className="page-shell__inner">
-        <HeroSection />
-        <ServicesSection services={services} />
-        <ReviewsSection reviewsData={reviewsData} />
-        <LinksSection quickLinkGroups={quickLinkGroups} />
-        <TeasersSection />
-      </div>
-
-      <SiteFooter />
+      <Header logoSrc={logo} isRoadsidePage={isRoadsidePage} />
+      {isRoadsidePage ? (
+        <RoadsidePage />
+      ) : (
+        <HomePage services={services} reviewsData={reviewsData} quickLinkGroups={quickLinkGroups} />
+      )}
+      <SiteFooter isRoadsidePage={isRoadsidePage} />
     </main>
   )
 }
