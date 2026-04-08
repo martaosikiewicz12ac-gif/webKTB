@@ -35,16 +35,15 @@ function AutokomisPage({ offerLinks }) {
 
         <div className="autokomis-offers">
           <div className="autokomis-offers__heading">
-            <p className="section-kicker">Ogłoszenia</p>
-            <h2>Tutaj znajdziesz nasze aktualne oferty.</h2>
+            <p className="section-kicker"></p>
+            <h2>Tutaj znajdziesz nasze aktualne oferty</h2>
           </div>
           <div className="autokomis-offers__grid">
             {offerLinks.map((link) => (
               <a key={link.label} href={link.href} className={`autokomis-offer-link autokomis-offer-link--${link.brand}`}>
-                <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
-                  <img src={link.icon} alt="" className="hub-link__icon" />
+                <span className="autokomis-offer-link__icon-wrap" aria-hidden="true">
+                  <img src={link.icon} alt="" className="autokomis-offer-link__icon" />
                 </span>
-                <span>{link.label}</span>
               </a>
             ))}
           </div>
