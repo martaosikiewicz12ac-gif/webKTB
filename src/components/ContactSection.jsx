@@ -33,7 +33,7 @@ function ContactSection({ contactData }) {
             </div>
           </div>
           <div className="contact-actions">
-            <a href={`tel:${contactData.primaryPhone.raw}`} className="button button--primary">
+            <a href={`tel:${contactData.primaryPhone.raw}`} className="button button--primary contact-call-button">
               Zadzwoń
             </a>
             <a href={contactData.mapLink} className="button button--secondary" target="_blank" rel="noreferrer">

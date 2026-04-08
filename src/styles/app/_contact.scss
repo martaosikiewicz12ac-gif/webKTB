@@ -63,6 +63,25 @@
   }
 }
 
+@keyframes contact-call-pulse {
+  0%,
+  100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 191, 72, 0.28);
+  }
+
+  50% {
+    transform: scale(1.03);
+    box-shadow: 0 0 0 12px rgba(255, 191, 72, 0);
+  }
+}
+
+@include bp.desktop-up {
+  .contact-call-button {
+    animation: contact-call-pulse 2.2s ease-in-out infinite;
+  }
+}
+
 .contact-map-panel {
   padding: 0;
   overflow: hidden;

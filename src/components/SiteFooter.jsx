@@ -3,7 +3,7 @@ function SiteFooter({ isInnerPage }) {
   const footerLinks = [
     { href: `${homeSectionPrefix}services`, label: 'Autokomis' },
     { href: '/pomoc-drogowa', label: 'Pomoc drogowa' },
-    { href: '#', label: 'Sztos' },
+    { href: 'https://kosmetykisztos.pl/', label: 'Sztos' },
     { href: '/kontakt', label: 'Kontakt' },
   ]
 
