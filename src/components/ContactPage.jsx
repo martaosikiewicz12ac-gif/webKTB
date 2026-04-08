@@ -1,9 +1,9 @@
 import ContactSection from './ContactSection.jsx'
 
-function ContactPage({ contactData }) {
+function ContactPage({ contactData, socialLinks }) {
   return (
     <div className="page-shell__inner contact-page">
-      <ContactSection contactData={contactData} />
+      <ContactSection contactData={contactData} socialLinks={socialLinks} />
     </div>
   )
 }

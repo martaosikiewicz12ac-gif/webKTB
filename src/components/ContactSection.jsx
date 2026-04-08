@@ -1,4 +1,4 @@
-function ContactSection({ contactData }) {
+function ContactSection({ contactData, socialLinks }) {
   return (
     <section className="section-block content-section contact-section" id="contact">
       <div className="section-heading">
@@ -51,6 +51,22 @@ function ContactSection({ contactData }) {
             />
           </div>
         </article>
+      </div>
+      <div className="contact-socials-grid">
+        <div className="contact-socials" aria-label="Social media">
+          {socialLinks.map((link) => (
+            <a key={link.label} href={link.href} className={`hub-link hub-link--${link.brand}`} aria-label={link.label}>
+              <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
+                <img src={link.icon} alt="" className="hub-link__icon" />
+              </span>
+              <span className="hub-link__label">{link.label}</span>
+            </a>
+          ))}
+        </div>
+        <div className="contact-socials-arrow" aria-hidden="true">
+          <span className="contact-socials-arrow__shaft" />
+          <span className="contact-socials-arrow__head" />
+        </div>
       </div>
     </section>
   )

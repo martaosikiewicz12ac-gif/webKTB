@@ -64,6 +64,8 @@ const quickLinkGroups = [
   },
 ]
 
+const socialLinks = quickLinkGroups[0].links
+
 const reviewsData = {
   score: '4,5',
   source: 'Na podstawie opinii w Google',
@@ -109,7 +111,7 @@ function App() {
       {isRoadsidePage ? (
         <RoadsidePage />
       ) : isContactPage ? (
-        <ContactPage contactData={contactData} />
+        <ContactPage contactData={contactData} socialLinks={socialLinks} />
       ) : (
         <HomePage services={services} reviewsData={reviewsData} quickLinkGroups={quickLinkGroups} />
       )}
