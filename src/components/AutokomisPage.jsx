@@ -6,12 +6,10 @@ function AutokomisPage({ offerLinks }) {
       <section className="section-block content-section panel panel--feature autokomis-section autokomis-panel">
         <div className="autokomis-copy">
           <p className="section-kicker">Autokomis</p>
-          <div className="autokomis-info__item">
-            <h2>Auto, które obejrzysz na spokojnie i kupisz bez stresu</h2>
-            <p className="autokomis-lead">
-              Nasz autokomis w Głogowie od lat pomaga klientom znaleźć sprawdzone samochody używane – uczciwie, jasno i konkretnie.
-            </p>
-          </div>
+          <h2>Auto, które obejrzysz na spokojnie i kupisz bez stresu</h2>
+          <p className="autokomis-lead">
+            Nasz autokomis w Głogowie od lat pomaga klientom znaleźć sprawdzone samochody używane – uczciwie, jasno i konkretnie.
+          </p>
           <div className="autokomis-hero-image">
             <img src={serviceKomis} alt="Autokomis Kupię Twoją Brykę" className="autokomis-hero-image__media" />
           </div>
