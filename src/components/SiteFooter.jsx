@@ -1,7 +1,6 @@
-function SiteFooter({ isInnerPage }) {
-  const homeSectionPrefix = isInnerPage ? '/#' : '#'
+function SiteFooter() {
   const footerLinks = [
-    { href: `${homeSectionPrefix}services`, label: 'Autokomis' },
+    { href: '/autokomis', label: 'Autokomis' },
     { href: '/pomoc-drogowa', label: 'Pomoc drogowa' },
     { href: 'https://kosmetykisztos.pl/', label: 'Sztos' },
     { href: '/kontakt', label: 'Kontakt' },

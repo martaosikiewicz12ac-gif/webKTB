@@ -1,0 +1,135 @@
+@use '../breakpoints' as bp;
+
+.autokomis-panel {
+  gap: 1.5rem;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.autokomis-copy {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.autokomis-copy h2 {
+  margin: 0;
+}
+
+.autokomis-lead {
+  margin-top: 0.9rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.autokomis-hero-image {
+  overflow: hidden;
+  border-radius: calc(var(--radius-lg) - 0.2rem);
+  box-shadow:
+    0 18px 32px -28px rgba(1, 7, 22, 0.8),
+    inset 0 1px 0 rgba(214, 223, 239, 0.08);
+}
+
+.autokomis-hero-image__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.autokomis-info {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.autokomis-info__item {
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.15rem;
+  border-radius: calc(var(--radius-lg) - 0.35rem);
+  background: rgba(214, 223, 239, 0.04);
+  box-shadow:
+    inset 0 1px 0 rgba(214, 223, 239, 0.08),
+    inset 0 -1px 0 rgba(4, 13, 32, 0.2);
+}
+
+.autokomis-info__item h2,
+.autokomis-info__item p,
+.autokomis-offers__heading h2 {
+  margin: 0;
+}
+
+.autokomis-offers {
+  display: grid;
+  gap: 1rem;
+}
+
+.autokomis-offers__grid {
+  display: grid;
+  gap: 0.9rem;
+
+  @include bp.tablet-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.autokomis-offer-link {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  min-height: 4.4rem;
+  padding: 1rem 1.15rem;
+  border-radius: calc(var(--radius-lg) - 0.2rem);
+  text-decoration: none;
+  color: var(--text-h);
+  background: rgba(214, 223, 239, 0.05);
+  box-shadow:
+    inset 0 1px 0 rgba(214, 223, 239, 0.08),
+    inset 0 -1px 0 rgba(4, 13, 32, 0.2);
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease,
+    background-color 0.2s ease;
+}
+
+.autokomis-offer-link:hover {
+  transform: translateY(-2px);
+  background: rgba(214, 223, 239, 0.08);
+  box-shadow:
+    inset 0 1px 0 rgba(214, 223, 239, 0.1),
+    0 18px 28px -24px rgba(1, 7, 22, 0.82);
+}
+
+.autokomis-offer-link:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 4px;
+}
+
+.autokomis-offer-link span:last-child {
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.autokomis-offers__footer {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.autokomis-offers__note {
+  margin: 0;
+}
+
+.autokomis-contact-link {
+  justify-self: end;
+  color: rgba(214, 223, 239, 0.72);
+  font-size: 0.92rem;
+  font-weight: 600;
+  text-decoration: underline;
+  text-underline-offset: 0.16rem;
+  transition: color 0.2s ease;
+}
+
+.autokomis-contact-link:hover {
+  color: var(--text-h);
+}

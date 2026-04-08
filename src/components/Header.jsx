@@ -3,7 +3,7 @@ function Header({ logoSrc, isInnerPage }) {
   const brandHref = isInnerPage ? '/' : '#top'
   const navLinks = [
     {
-      href: `${homeSectionPrefix}services`,
+      href: '/autokomis',
       fullLabel: 'Autokomis',
       shortLabel: 'Komis',
     },

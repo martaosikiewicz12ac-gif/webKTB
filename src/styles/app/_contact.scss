@@ -1,5 +1,11 @@
 @use '../breakpoints' as bp;
 
+.contact-section {
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
 .contact-layout {
   display: grid;
   gap: var(--space-3);

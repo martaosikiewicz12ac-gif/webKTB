@@ -19,38 +19,36 @@ const roadsideGallery = [
 function RoadsidePage() {
   return (
     <div className="page-shell__inner roadside-page">
-      <section className="section-block content-section roadside-section">
-        <article className="panel panel--feature roadside-panel">
-          <div className="roadside-copy">
-            <p className="section-kicker">Pomoc drogowa</p>
-            <h2>Pomagamy nawet w najtrudniejszych sytuacjach.</h2>
-            <p className="roadside-lead">
-              Działamy konkretnie i bez chaosu. Zadzwoń, a ustalimy, jak najszybciej pomóc i zorganizować transport auta lawetą.
-            </p>
-          </div>
+      <section className="section-block content-section panel panel--feature roadside-section roadside-panel">
+        <div className="roadside-copy">
+          <p className="section-kicker">Pomoc drogowa</p>
+          <h2>Pomagamy nawet w najtrudniejszych sytuacjach.</h2>
+          <p className="roadside-lead">
+            Działamy konkretnie i bez chaosu. Zadzwoń, a ustalimy, jak najszybciej pomóc i zorganizować transport auta lawetą.
+          </p>
+        </div>
 
-          <div className="roadside-actions">
-            <a href="tel:505922020" className="button button--primary roadside-call-button">
-              Zadzwoń
-            </a>
-          </div>
+        <div className="roadside-actions">
+          <a href="tel:505922020" className="button button--primary roadside-call-button">
+            Zadzwoń
+          </a>
+        </div>
 
-          <div className="roadside-info">
-            {roadsideHighlights.map((item) => (
-              <div key={item} className="roadside-info__item">
-                <p>{item}</p>
-              </div>
-            ))}
-          </div>
+        <div className="roadside-info">
+          {roadsideHighlights.map((item) => (
+            <div key={item} className="roadside-info__item">
+              <p>{item}</p>
+            </div>
+          ))}
+        </div>
 
-          <div className="roadside-gallery" aria-label="Zdjęcia pomocy drogowej">
-            {roadsideGallery.map((image) => (
-              <div key={image.alt} className="roadside-gallery__item">
-                <img src={image.src} alt={image.alt} className="roadside-gallery__image" />
-              </div>
-            ))}
-          </div>
-        </article>
+        <div className="roadside-gallery" aria-label="Zdjęcia pomocy drogowej">
+          {roadsideGallery.map((image) => (
+            <div key={image.alt} className="roadside-gallery__item">
+              <img src={image.src} alt={image.alt} className="roadside-gallery__image" />
+            </div>
+          ))}
+        </div>
       </section>
     </div>
   )

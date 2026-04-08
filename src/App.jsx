@@ -14,6 +14,7 @@ import Header from './components/Header.jsx'
 import HomePage from './components/HomePage.jsx'
 import RoadsidePage from './components/RoadsidePage.jsx'
 import ContactPage from './components/ContactPage.jsx'
+import AutokomisPage from './components/AutokomisPage.jsx'
 import SiteFooter from './components/SiteFooter.jsx'
 import './App.scss'
 
@@ -34,7 +35,7 @@ const services = [
     title: 'Komis',
     image: serviceKomis,
     imageAlt: 'Komis samochodowy',
-    href: '#',
+    href: '/autokomis',
   },
   {
     title: 'Pomoc drogowa',
@@ -65,6 +66,7 @@ const quickLinkGroups = [
 ]
 
 const socialLinks = quickLinkGroups[0].links
+const offerLinks = quickLinkGroups[1].links
 
 const reviewsData = {
   score: '4,5',
@@ -101,21 +103,24 @@ const contactData = {
 
 function App() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
+  const isAutokomisPage = normalizedPath === '/autokomis'
   const isRoadsidePage = normalizedPath === '/pomoc-drogowa'
   const isContactPage = normalizedPath === '/kontakt'
-  const isInnerPage = isRoadsidePage || isContactPage
+  const isInnerPage = isAutokomisPage || isRoadsidePage || isContactPage
 
   return (
     <main className="page-shell" id="top">
       <Header logoSrc={logo} isInnerPage={isInnerPage} />
-      {isRoadsidePage ? (
+      {isAutokomisPage ? (
+        <AutokomisPage offerLinks={offerLinks} />
+      ) : isRoadsidePage ? (
         <RoadsidePage />
       ) : isContactPage ? (
         <ContactPage contactData={contactData} socialLinks={socialLinks} />
       ) : (
         <HomePage services={services} reviewsData={reviewsData} quickLinkGroups={quickLinkGroups} />
       )}
-      <SiteFooter isInnerPage={isInnerPage} />
+      <SiteFooter />
     </main>
   )
 }
