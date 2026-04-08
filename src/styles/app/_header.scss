@@ -133,7 +133,15 @@
   display: none;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 767px) {
+  .site-header .site-band__inner {
+    gap: 0.55rem;
+  }
+
+  .site-nav {
+    flex-wrap: nowrap;
+  }
+
   .site-nav__label--full {
     display: none;
   }
@@ -157,7 +165,7 @@
   .site-nav__link {
     min-height: 1.75rem;
     padding: 0.24rem 0.42rem;
-    font-size: 0.8rem;
+    font-size: 0.74rem;
   }
 
   .site-nav {

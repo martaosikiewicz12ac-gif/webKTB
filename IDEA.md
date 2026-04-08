@@ -93,3 +93,22 @@
 - Motyw lokalizacji typu `Kolorowa 12, 67-200 Glogow` bardzo dobrze dziala jako detal i daje dobry klimat marki.
 - Na ten moment nie uzywac lokalizacji bezposrednio w hero.
 - Warto wrocic do tego motywu pozniej i rozwazyc go w innej sekcji albo w subtelniejszej formie.
+
+# Status prac
+
+## Wykonane
+- Dodano osobna strone `Kontakt`.
+- Dodano osobna strone `Autokomis`.
+- Dodano osobna strone `Pomoc drogowa` i uproszczono jej uklad.
+- Podlaczono podstawowa nawigacje pod nowe podstrony.
+- Zmieniono kierunek layoutu wizualnego na bardziej kanciasty: bez zaokraglen w wielu kluczowych sekcjach i kartach.
+- Wprowadzono nowy schemat dekoracyjny: subtelne gradientowe tla i cienkie narozne bordery jako motyw przewodni.
+- Hero zostalo dopracowane osobno dla mobile i desktopu.
+- Kafelki uslug dostaly nowy uklad z tytulem osadzonym na obrazie.
+
+## Do zrobienia
+- Zrobic osobna strone `Skup aut`.
+- Uzupelnic wszystkie linki z placeholderow `#`.
+- Sprawdzic wszystkie linki na calej stronie i upewnic sie, ze prowadza do poprawnych miejsc.
+- Przejrzec cala strone na wszystkich wersjach responsywnych i dopracowac detale mobile / tablet / desktop.
+- Sprawdzic spojnosci wizualne po zmianie layoutu na wersje bez zaokraglen.
