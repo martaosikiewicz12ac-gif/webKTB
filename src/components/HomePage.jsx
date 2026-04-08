@@ -6,13 +6,15 @@ import TeasersSection from './TeasersSection.jsx'
 
 function HomePage({ services, reviewsData, quickLinkGroups }) {
   return (
-    <div className="page-shell__inner">
+    <>
       <HeroSection />
-      <ServicesSection services={services} />
-      <ReviewsSection reviewsData={reviewsData} />
-      <LinksSection quickLinkGroups={quickLinkGroups} />
-      <TeasersSection />
-    </div>
+      <div className="page-shell__inner">
+        <ServicesSection services={services} />
+        <ReviewsSection reviewsData={reviewsData} />
+        <LinksSection quickLinkGroups={quickLinkGroups} />
+        <TeasersSection />
+      </div>
+    </>
   )
 }
 
