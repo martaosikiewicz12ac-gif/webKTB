@@ -54,6 +54,16 @@
   }
 }
 
+.roadside-actions--top {
+  margin-top: 0.75rem;
+}
+
+@include bp.desktop-up {
+  .roadside-actions--bottom {
+    display: none;
+  }
+}
+
 .roadside-call-button {
   width: 100%;
 }
@@ -75,16 +85,6 @@
   .roadside-call-button {
     min-width: 16rem;
     animation: roadside-call-pulse 2.2s ease-in-out infinite;
-  }
-}
-
-.roadside-info {
-  display: grid;
-  gap: 0.9rem;
-  min-width: 0;
-
-  @include bp.tablet-up {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
 }
 
@@ -161,8 +161,13 @@
   min-width: 0;
 
   @include bp.tablet-up {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+    grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+}
+
+.roadside-gallery-card {
+  display: grid;
+  gap: 0.9rem;
 }
 
 .roadside-gallery__item {

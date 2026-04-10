@@ -8,6 +8,13 @@
   gap: 1.15rem;
 }
 
+@include bp.desktop-up {
+  .reviews-summary {
+    justify-content: center;
+    text-align: left;
+  }
+}
+
 .reviews-score {
   display: flex;
   align-items: center;

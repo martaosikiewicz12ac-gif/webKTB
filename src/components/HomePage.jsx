@@ -10,8 +10,8 @@ function HomePage({ services, reviewsData, quickLinkGroups }) {
       <HeroSection />
       <div className="page-shell__inner">
         <ServicesSection services={services} />
-        <ReviewsSection reviewsData={reviewsData} />
         <LinksSection quickLinkGroups={quickLinkGroups} />
+        <ReviewsSection reviewsData={reviewsData} />
         <TeasersSection />
       </div>
     </>

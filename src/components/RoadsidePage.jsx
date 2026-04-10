@@ -1,5 +1,4 @@
 import roadsideKorzystnie from '../images/korzystnie.png'
-import roadsideNiezawodnie from '../images/niezawodnie.png'
 import roadsideBezpiecznie from '../images/bezpiecznie.png'
 import roadsideKomfortowo from '../images/komfortowo.png'
 
@@ -11,10 +10,14 @@ const roadsideHighlights = [
 
 const roadsideGallery = [
   { src: roadsideBezpiecznie, alt: 'Pomoc drogowa bezpiecznie' },
-  { src: roadsideNiezawodnie, alt: 'Pomoc drogowa niezawodnie' },
   { src: roadsideKomfortowo, alt: 'Pomoc drogowa komfortowo' },
   { src: roadsideKorzystnie, alt: 'Pomoc drogowa korzystnie' },
 ]
+
+const roadsideVisuals = roadsideGallery.map((image, index) => ({
+  ...image,
+  text: roadsideHighlights[index],
+}))
 
 function RoadsidePage() {
   return (
@@ -26,28 +29,30 @@ function RoadsidePage() {
           <p className="roadside-lead">
             Działamy konkretnie i bez chaosu. Zadzwoń, a ustalimy, jak najszybciej pomóc i zorganizować transport auta lawetą.
           </p>
-        </div>
-
-        <div className="roadside-actions">
-          <a href="tel:505922020" className="button button--primary roadside-call-button">
-            Zadzwoń
-          </a>
-        </div>
-
-        <div className="roadside-info">
-          {roadsideHighlights.map((item) => (
-            <div key={item} className="roadside-info__item">
-              <p>{item}</p>
-            </div>
-          ))}
+          <div className="roadside-actions roadside-actions--top">
+            <a href="tel:505922020" className="button button--primary roadside-call-button">
+              Zadzwoń
+            </a>
+          </div>
         </div>
 
         <div className="roadside-gallery" aria-label="Zdjęcia pomocy drogowej">
-          {roadsideGallery.map((image) => (
-            <div key={image.alt} className="roadside-gallery__item">
-              <img src={image.src} alt={image.alt} className="roadside-gallery__image" />
+          {roadsideVisuals.map((item) => (
+            <div key={item.alt} className="roadside-gallery-card">
+              <div className="roadside-gallery__item">
+                <img src={item.src} alt={item.alt} className="roadside-gallery__image" />
+              </div>
+              <div className="roadside-info__item">
+                <p>{item.text}</p>
+              </div>
             </div>
           ))}
+        </div>
+
+        <div className="roadside-actions roadside-actions--bottom">
+          <a href="tel:505922020" className="button button--primary roadside-call-button">
+            Zadzwoń
+          </a>
         </div>
       </section>
     </div>
