@@ -35,8 +35,7 @@ Podaj nam podstawowe informacje, a przygotujemy indywidualną ofertę – szybko
             <h2 id="skup-form-title">Napisz do nas w sprawie skupu auta.</h2>
           </div>
           <form action="https://api.web3forms.com/submit" method="POST" className="skup-form">
-            <input type="hidden" name="access_key" value="YOUR_WEB3FORMS_ACCESS_KEY" />
-            <input type="hidden" name="subject" value="Nowa wiadomość ze strony Skup aut" />
+            <input type="hidden" name="access_key" value="eda88eed-3eee-467e-99de-c3f8da543dac" />
             <input type="hidden" name="from_name" value="Kupię Twoją Brykę - Skup aut" />
 
             <label className="skup-form__field">
@@ -51,7 +50,7 @@ Podaj nam podstawowe informacje, a przygotujemy indywidualną ofertę – szybko
 
             <label className="skup-form__field">
               <span>E-mail</span>
-              <input type="email" name="email" autoComplete="email" />
+              <input type="email" name="email" autoComplete="email" required />
             </label>
 
             <label className="skup-form__field">
@@ -65,28 +64,33 @@ Podaj nam podstawowe informacje, a przygotujemy indywidualną ofertę – szybko
             </label>
 
             <label className="skup-form__field">
+              <span>Po lifcie</span>
+              <input type="text" name="facelift_status" placeholder="(opcjonalnie)" />
+            </label>
+
+            <label className="skup-form__field">
               <span>Rocznik</span>
               <input type="number" name="car_year" min="1950" max="2099" inputMode="numeric" required />
             </label>
 
             <label className="skup-form__field">
               <span>Przebieg</span>
-              <input type="number" name="car_mileage" min="0" inputMode="numeric" />
-            </label>
-
-            <label className="skup-form__field">
-              <span>Po lifcie</span>
-              <input type="text" name="facelift_status" placeholder="(opcjonalnie)" />
+              <input type="number" name="car_mileage" min="0" inputMode="numeric" required />
             </label>
 
             <label className="skup-form__field">
               <span>Moc silnika</span>
-              <input type="text" name="engine_power" placeholder="np. 150 KM" />
+              <input type="text" name="engine_power" placeholder="np. 150 KM" required />
             </label>
 
             <label className="skup-form__field">
               <span>Pojemność</span>
-              <input type="text" name="engine_capacity" placeholder="np. 2.0" />
+              <input type="text" name="engine_capacity" placeholder="np. 2.0" required />
+            </label>
+
+            <label className="skup-form__field skup-form__field--full">
+              <span>Tytuł wiadomości</span>
+              <input type="text" name="subject" defaultValue="Proszę o wycenę auta." required />
             </label>
 
             <label className="skup-form__field skup-form__field--full">
@@ -95,8 +99,13 @@ Podaj nam podstawowe informacje, a przygotujemy indywidualną ofertę – szybko
             </label>
 
             <label className="skup-form__field skup-form__field--full">
+              <span>Uszkodzenia</span>
+              <textarea name="damage" rows="4" />
+            </label>
+
+            <label className="skup-form__field skup-form__field--full">
               <span>Wiadomość</span>
-              <textarea name="message" rows="6" required />
+              <textarea name="message" rows="6" />
             </label>
 
             <div className="skup-form__actions">
