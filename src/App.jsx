@@ -15,6 +15,7 @@ import HomePage from './components/HomePage.jsx'
 import RoadsidePage from './components/RoadsidePage.jsx'
 import ContactPage from './components/ContactPage.jsx'
 import AutokomisPage from './components/AutokomisPage.jsx'
+import SkupAutPage from './components/SkupAutPage.jsx'
 import SiteFooter from './components/SiteFooter.jsx'
 import './App.scss'
 
@@ -29,7 +30,7 @@ const services = [
     title: 'Skup aut',
     image: serviceSkup,
     imageAlt: 'Skup aut',
-    href: '#',
+    href: '/skup-aut',
   },
   {
     title: 'Komis',
@@ -104,15 +105,18 @@ const contactData = {
 function App() {
   const normalizedPath = window.location.pathname.replace(/\/+$/, '') || '/'
   const isAutokomisPage = normalizedPath === '/autokomis'
+  const isSkupAutPage = normalizedPath === '/skup-aut'
   const isRoadsidePage = normalizedPath === '/pomoc-drogowa'
   const isContactPage = normalizedPath === '/kontakt'
-  const isInnerPage = isAutokomisPage || isRoadsidePage || isContactPage
+  const isInnerPage = isAutokomisPage || isSkupAutPage || isRoadsidePage || isContactPage
 
   return (
     <main className="page-shell" id="top">
       <Header logoSrc={logo} isInnerPage={isInnerPage} />
       {isAutokomisPage ? (
         <AutokomisPage offerLinks={offerLinks} />
+      ) : isSkupAutPage ? (
+        <SkupAutPage />
       ) : isRoadsidePage ? (
         <RoadsidePage />
       ) : isContactPage ? (

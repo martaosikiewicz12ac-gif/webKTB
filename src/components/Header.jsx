@@ -8,7 +8,7 @@ function Header({ logoSrc, isInnerPage }) {
       shortLabel: 'Komis',
     },
     {
-      href: `${homeSectionPrefix}reviews`,
+      href: '/skup-aut',
       fullLabel: 'Skup aut',
       shortLabel: 'Skup',
     },

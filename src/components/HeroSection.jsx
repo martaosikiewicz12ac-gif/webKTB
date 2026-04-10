@@ -13,7 +13,7 @@ function HeroSection() {
           <a href="/autokomis" className="button button--secondary">
             Zobacz samochody
           </a>
-          <a href="#reviews" className="button button--secondary">
+          <a href="/skup-aut" className="button button--secondary">
             Sprzedaj auto
           </a>
         </div>

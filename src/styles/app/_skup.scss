@@ -1,0 +1,177 @@
+@use '../breakpoints' as bp;
+
+.skup-panel {
+  gap: 1.5rem;
+  padding: 0;
+  background: transparent;
+  box-shadow: none;
+}
+
+.skup-copy {
+  display: grid;
+  gap: 0.9rem;
+  min-width: 0;
+}
+
+.skup-copy h2 {
+  margin: 0;
+}
+
+.skup-lead {
+  margin-top: 0.9rem;
+  font-size: 1.02rem;
+  line-height: 1.55;
+}
+
+.skup-hero-image {
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  box-shadow:
+    0 18px 32px -28px rgba(1, 7, 22, 0.8),
+    inset 0 1px 0 rgba(214, 223, 239, 0.08);
+}
+
+.skup-hero-image::before,
+.skup-info__item::before,
+.skup-form-block::before {
+  content: '';
+  position: absolute;
+  top: 0.28rem;
+  left: 0.28rem;
+  width: 6rem;
+  height: 6rem;
+  background:
+    linear-gradient(90deg, rgba(214, 130, 34, 0.72) 0%, rgba(184, 96, 17, 0) 100%),
+    linear-gradient(180deg, rgba(214, 130, 34, 0.72) 0%, rgba(184, 96, 17, 0) 100%);
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: top left, top left;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.skup-hero-image::after,
+.skup-info__item::after,
+.skup-form-block::after {
+  content: '';
+  position: absolute;
+  right: 0.28rem;
+  bottom: 0.28rem;
+  width: 6rem;
+  height: 6rem;
+  background:
+    linear-gradient(270deg, rgba(214, 130, 34, 0.72) 0%, rgba(184, 96, 17, 0) 100%),
+    linear-gradient(0deg, rgba(214, 130, 34, 0.72) 0%, rgba(184, 96, 17, 0) 100%);
+  background-size: 100% 1px, 1px 100%;
+  background-repeat: no-repeat;
+  background-position: bottom right, bottom right;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.skup-hero-image__media {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+}
+
+.skup-info {
+  display: grid;
+  gap: 0.9rem;
+}
+
+.skup-info__item,
+.skup-form-block {
+  position: relative;
+  display: grid;
+  gap: 0.7rem;
+  padding: 1.15rem;
+  border-radius: 0;
+  background:
+    radial-gradient(circle at top left, rgba(214, 223, 239, 0.1) 0%, rgba(214, 223, 239, 0.045) 32%, rgba(214, 223, 239, 0.014) 62%, rgba(214, 223, 239, 0) 100%),
+    linear-gradient(135deg, rgba(214, 223, 239, 0.02) 0%, rgba(214, 223, 239, 0) 100%);
+  box-shadow:
+    inset 0 1px 0 rgba(214, 223, 239, 0.08),
+    inset 0 -1px 0 rgba(4, 13, 32, 0.2);
+}
+
+.skup-info__item > *,
+.skup-form-block > * {
+  position: relative;
+  z-index: 1;
+}
+
+.skup-info__item h3,
+.skup-info__item p,
+.skup-form-block__heading h2 {
+  margin: 0;
+}
+
+.skup-form-block {
+  gap: 1rem;
+}
+
+.skup-form {
+  display: grid;
+  gap: 0.9rem;
+
+  @include bp.tablet-up {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.skup-form__field {
+  display: grid;
+  gap: 0.45rem;
+}
+
+.skup-form__field--full,
+.skup-form__actions {
+  @include bp.tablet-up {
+    grid-column: 1 / -1;
+  }
+}
+
+.skup-form__field span {
+  color: var(--text);
+  font-size: 0.82rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.skup-form__field input,
+.skup-form__field textarea {
+  width: 100%;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(214, 223, 239, 0.14);
+  border-radius: 0;
+  background: rgba(4, 13, 32, 0.2);
+  color: var(--text-h);
+  font: inherit;
+}
+
+.skup-form__field textarea {
+  resize: vertical;
+}
+
+.skup-form__field input:focus,
+.skup-form__field textarea:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+.skup-form__actions {
+  display: grid;
+  gap: 0.75rem;
+}
+
+.skup-form__submit {
+  width: 100%;
+
+  @include bp.tablet-up {
+    width: fit-content;
+  }
+}
