@@ -1,4 +1,13 @@
 function ContactSection({ contactData, socialLinks }) {
+  const openExternalLink = (event, href, isExternal) => {
+    if (!isExternal) {
+      return
+    }
+
+    event.preventDefault()
+    window.open(href, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section className="section-block content-section contact-section" id="contact">
       <div className="section-heading">
@@ -53,12 +62,20 @@ function ContactSection({ contactData, socialLinks }) {
         </article>
       </div>
       <div className="contact-socials-grid">
-        <div className="contact-socials" aria-label="Social media">
-          {socialLinks.map((link) => (
-            <a key={link.label} href={link.href} className={`hub-link hub-link--${link.brand}`} aria-label={link.label}>
-              <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
-                <img src={link.icon} alt="" className="hub-link__icon" />
-              </span>
+          <div className="contact-socials" aria-label="Social media">
+            {socialLinks.map((link) => (
+              <a
+                key={link.label}
+                href={link.href}
+                className={`hub-link hub-link--${link.brand}`}
+                aria-label={link.label}
+                target={link.isExternal ? '_blank' : undefined}
+                rel={link.isExternal ? 'noreferrer' : undefined}
+                onClick={(event) => openExternalLink(event, link.href, link.isExternal)}
+              >
+                <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
+                  <img src={link.icon} alt="" className="hub-link__icon" />
+                </span>
               <span className="hub-link__label">{link.label}</span>
             </a>
           ))}

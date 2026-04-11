@@ -24,7 +24,7 @@ const services = [
     title: 'Sprzedaż samochodów',
     image: serviceSprzedaz,
     imageAlt: 'Sprzedaż samochodów',
-    href: '#',
+    href: '/autokomis',
   },
   {
     title: 'Skup aut',
@@ -50,18 +50,60 @@ const quickLinkGroups = [
   {
     title: 'Znajdziesz nas tutaj',
     links: [
-      { label: 'Facebook', href: '#', icon: facebookIcon, brand: 'facebook' },
-      { label: 'Instagram', href: '#', icon: instagramIcon, brand: 'instagram' },
-      { label: 'TikTok', href: '#', icon: tiktokIcon, brand: 'tiktok' },
+      {
+        label: 'Facebook',
+        href: 'https://www.facebook.com/kupietwojabryke',
+        icon: facebookIcon,
+        brand: 'facebook',
+        isExternal: true,
+      },
+      {
+        label: 'Instagram',
+        href: 'https://www.instagram.com/kupie.twoja.bryke/',
+        icon: instagramIcon,
+        brand: 'instagram',
+        isExternal: true,
+      },
+      {
+        label: 'TikTok',
+        href: 'https://www.tiktok.com/@kupietwojabryke?_r=1&_t=ZN-95QRSzfB0jO',
+        icon: tiktokIcon,
+        brand: 'tiktok',
+        isExternal: true,
+      },
     ],
   },
   {
     title: 'Oferty znajdziesz na',
     links: [
-      { label: 'OLX', href: '#', icon: olxIcon, brand: 'olx' },
-      { label: 'Allegro', href: '#', icon: allegroIcon, brand: 'allegro' },
-      { label: 'Autoplac', href: '#', icon: autoplacIcon, brand: 'autoplac' },
-      { label: 'Aplikacja', href: '#', icon: appIcon, brand: 'app' },
+      {
+        label: 'OLX',
+        href: 'https://www.olx.pl/oferty/user/2axojr/',
+        icon: olxIcon,
+        brand: 'olx',
+        isExternal: true,
+      },
+      {
+        label: 'Allegro',
+        href: 'https://allegro.pl/listing?string=kupietwojabryke',
+        icon: allegroIcon,
+        brand: 'allegro',
+        isExternal: true,
+      },
+      {
+        label: 'Autoplac',
+        href: 'https://autoplac.pl/dealer/kupietwojabryke',
+        icon: autoplacIcon,
+        brand: 'autoplac',
+        isExternal: true,
+      },
+      {
+        label: 'Aplikacja',
+        href: 'https://kupietwojabryke.getauto.pl/',
+        icon: appIcon,
+        brand: 'app',
+        isExternal: true,
+      },
     ],
   },
 ]

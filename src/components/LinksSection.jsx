@@ -1,4 +1,13 @@
 function LinksSection({ quickLinkGroups }) {
+  const openExternalLink = (event, href, isExternal) => {
+    if (!isExternal) {
+      return
+    }
+
+    event.preventDefault()
+    window.open(href, '_blank', 'noopener,noreferrer')
+  }
+
   return (
     <section className="section-block content-section" id="links">
       <div className="section-heading">
@@ -9,7 +18,15 @@ function LinksSection({ quickLinkGroups }) {
           <div key={group.title} className="links-group">
             <div className="link-hub">
               {group.links.map((link) => (
-                <a key={link.label} href={link.href} className={`hub-link hub-link--${link.brand}`} aria-label={link.label}>
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={`hub-link hub-link--${link.brand}`}
+                  aria-label={link.label}
+                  target={link.isExternal ? '_blank' : undefined}
+                  rel={link.isExternal ? 'noreferrer' : undefined}
+                  onClick={(event) => openExternalLink(event, link.href, link.isExternal)}
+                >
                   <span className={`hub-link__icon-wrap hub-link__icon-wrap--${link.brand}`} aria-hidden="true">
                     <img src={link.icon} alt="" className="hub-link__icon" />
                   </span>

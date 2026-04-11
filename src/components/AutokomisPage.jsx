@@ -36,12 +36,18 @@ function AutokomisPage({ offerLinks }) {
             <p className="section-kicker"></p>
             <h2>Tutaj znajdziesz nasze aktualne oferty</h2>
           </div>
-          <div className="autokomis-offers__grid">
-            {offerLinks.map((link) => (
-              <a key={link.label} href={link.href} className={`autokomis-offer-link autokomis-offer-link--${link.brand}`}>
-                <span className="autokomis-offer-link__icon-wrap" aria-hidden="true">
-                  <img src={link.icon} alt="" className="autokomis-offer-link__icon" />
-                </span>
+            <div className="autokomis-offers__grid">
+              {offerLinks.map((link) => (
+                <a
+                  key={link.label}
+                  href={link.href}
+                  className={`autokomis-offer-link autokomis-offer-link--${link.brand}`}
+                  target={link.isExternal ? '_blank' : undefined}
+                  rel={link.isExternal ? 'noreferrer' : undefined}
+                >
+                  <span className="autokomis-offer-link__icon-wrap" aria-hidden="true">
+                    <img src={link.icon} alt="" className="autokomis-offer-link__icon" />
+                  </span>
               </a>
             ))}
           </div>
