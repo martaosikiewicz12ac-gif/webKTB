@@ -85,7 +85,7 @@ const quickLinkGroups = [
       },
       {
         label: 'Allegro',
-        href: 'https://allegro.pl/listing?string=kupietwojabryke',
+        href: 'https://business.allegro.pl/uzytkownik/kupietwojabryke',
         icon: allegroIcon,
         brand: 'allegro',
         isExternal: true,
